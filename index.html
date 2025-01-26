@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    
+    <h1 id="title"></h1>
+    <input id="item" type="text" placeholder="item">
+    <input id="participant" type="text" placeholder="participant">
+    <button onclick="Add()">Add</button>
+    <div id="participantsList" class="test"></div>
+    <button onclick="Draw()">Draw</button>
+    <button onclick="Reset()">Reset</button>
+    <p id="winnerResult"></p>
     <script src="./main.js"></script>
 </body>
 </html>
