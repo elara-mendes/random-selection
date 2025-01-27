@@ -8,6 +8,7 @@ let titleItem = document.getElementById("title");
 function Add() {
     if (item.value !== "") {
         titleItem.innerHTML = item.value;
+        item.style.display = "none"
         item.value = "";
     }
 
@@ -25,11 +26,14 @@ function Draw() {
             [participants[i], participants[j]] = [participants[j], participants[i]]; // Fisher-Yates (ou Knuth shuffle)
         }
     } else {
-        console.log("Anyone was added.")
+        console.log("Anyone was added.");
     }
     if (titleItem.innerHTML !== "") {
         winnerResult.innerHTML += `${participants[0]} its the winner! and got ${titleItem.innerHTML}!`;
         participantsList.innerHTML = "";
+        titleItem.innerHTML = "";
+        item.style.display = "inline"
+        participants.length = 0
     }
 }
 
@@ -39,4 +43,6 @@ function Reset() {
     participantsList.innerHTML = "";
     item.value = "";
     participant.value = "";
+    item.style.display = "inline"
+    participants.length = 0
 }

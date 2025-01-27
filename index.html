@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Draw</title>
+    <link rel="shortcut icon" href="./assets/nerd_face.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
+
 <body>
-    <h1 id="title"></h1>
-    <input id="item" type="text" placeholder="item">
-    <input id="participant" type="text" placeholder="participant">
-    <button onclick="Add()">Add</button>
-    <div id="participantsList" class="test"></div>
-    <button onclick="Draw()">Draw</button>
-    <button onclick="Reset()">Reset</button>
-    <p id="winnerResult"></p>
-    <script src="./main.js"></script>
+    <main class="main-content">
+        <h1 class="main-header">Write the item and the participants!</h1>
+        <h1 id="title"></h1>
+
+        <div class="input-boxes">
+            <input id="item" type="text" placeholder="Item">
+            <input id="participant" type="text" placeholder="Participant">
+        <button onclick="Add()">Add</button>
+        </div>
+        
+        <div id="participantsList" class="test"></div>
+
+        <div class="buttons">
+            <button onclick="Draw()">Draw</button>
+            <button onclick="Reset()">Reset</button>
+        </div>
+        
+        <p id="winnerResult"></p>
+    </main>
+
+    <script src="./assets/main.js"></script>
 </body>
+
 </html>
