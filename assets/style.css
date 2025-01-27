@@ -40,7 +40,7 @@ input {
     height: 250px;
     border: 2px solid white;
     border-radius: .5em;
-
+    overflow-y: auto;
     color: white;
 }
 
