@@ -1,4 +1,5 @@
 let participants = [];
+let winners = [];
 let participant = document.getElementById("participant");
 let item = document.getElementById("item");
 let participantsList = document.getElementById("participantsList");
@@ -30,11 +31,17 @@ function Draw() {
     }
     if (titleItem.innerHTML !== "") {
         winnerResult.innerHTML += `${participants[0]} its the winner! and got ${titleItem.innerHTML}!`;
-        participantsList.innerHTML = "";
-        titleItem.innerHTML = "";
-        item.style.display = "inline"
-        participants.length = 0
+        participants.shift(participant[0]);
+        participantsList.innerHTML = participants.map(p => `<p>${p}</p>`).join("");
+        // participantsList.innerHTML = "";
+        // titleItem.innerHTML = "";
+        // item.style.display = "inline"
+        // participants.length = 0
     }
+
+    setTimeout(() => {
+        winnerResult.innerHTML = "";
+    }, 2000);
 }
 
 function Reset() {
