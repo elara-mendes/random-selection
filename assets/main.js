@@ -35,9 +35,10 @@ function Draw() {
 
         if (titleItem.innerHTML !== "") {
             winnerResult.innerHTML += `${participants[0]} é o vencedor! e ganhou ${titleItem.innerHTML}!`;
-            participants.shift(participant[0]);
+            participants.shift(participants[0]);
             console.log(participants)
             participantsList.innerHTML = participants.map(p => `<p>${p}</p>`).join("");
+            drawButton.setAttribute("disabled", "true");
         }
 
         if (participants.length == 0) {
@@ -45,13 +46,11 @@ function Draw() {
             item.style.display = "inline";
             mainHeader.style.display = "block";
         }
-
-        drawButton.setAttribute("disabled", "true");
         
         setTimeout(() => {
             winnerResult.innerHTML = "";
             drawButton.removeAttribute("disabled");
-        }, 1500);
+        }, 2500);
 }
 
 function Reset() {
