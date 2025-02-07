@@ -6,12 +6,14 @@ let participantsList = document.getElementById("participantsList");
 let winnerResult = document.getElementById("winnerResult");
 let titleItem = document.getElementById("title");
 let drawButton = document.getElementById("drawButton");
+let mainHeader = document.querySelector(".main-header");
 
 function Add() {
     if (item.value !== "") {
         titleItem.innerHTML = item.value;
-        item.style.display = "none"
+        item.style.display = "none";
         item.value = "";
+        mainHeader.style.display = "none";
     }
 
     if (participant.value !== "") {
@@ -32,7 +34,7 @@ function Draw() {
         }
 
         if (titleItem.innerHTML !== "") {
-            winnerResult.innerHTML += `${participants[0]} its the winner! and got ${titleItem.innerHTML}!`;
+            winnerResult.innerHTML += `${participants[0]} é o vencedor! e ganhou ${titleItem.innerHTML}!`;
             participants.shift(participant[0]);
             console.log(participants)
             participantsList.innerHTML = participants.map(p => `<p>${p}</p>`).join("");
@@ -41,6 +43,7 @@ function Draw() {
         if (participants.length == 0) {
             titleItem.innerHTML = "";
             item.style.display = "inline";
+            mainHeader.style.display = "block";
         }
 
         drawButton.setAttribute("disabled", "true");
@@ -59,4 +62,5 @@ function Reset() {
     participant.value = "";
     item.style.display = "inline"
     participants.length = 0
+    mainHeader.style.display = "block";
 }

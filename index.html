@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Draw</title>
-    <link rel="shortcut icon" href="./assets/nerd_face.png" type="image/x-icon">
+    <title>Sorteio</title>
+    <link rel="shortcut icon" href="./assets/heart.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 
 <body>
     <main class="main-content">
-        <h1 class="main-header">Write the item and the participants!</h1>
+        <h1 class="main-header">Escreva o prêmio e o primeiro participante!</h1>
         <h1 id="title"></h1>
 
         <div class="input-boxes">
-            <input id="item" type="text" placeholder="Item">
-            <input id="participant" type="text" placeholder="Participant">
-        <button onclick="Add()">Add</button>
+            <input id="item" type="text" placeholder="Prêmio">
+            <input id="participant" type="text" placeholder="Participante">
+        <button onclick="Add()">Adicionar</button>
         </div>
         
         <div id="participantsList" class="test"></div>
 
         <div class="buttons">
-            <button onclick="Draw()" id="drawButton">Draw</button>
-            <button onclick="Reset()">Reset</button>
+            <button onclick="Draw()" id="drawButton">Sortear</button>
+            <button onclick="Reset()">Resetar</button>
         </div>
         
         <p id="winnerResult"></p>
