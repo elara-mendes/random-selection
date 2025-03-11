@@ -51,6 +51,8 @@ function Draw() {
             winnerResult.innerHTML = "";
             drawButton.removeAttribute("disabled");
         }, 2500);
+
+        launchConfetti();
 }
 
 function Reset() {
@@ -62,4 +64,12 @@ function Reset() {
     item.style.display = "inline"
     participants.length = 0
     mainHeader.style.display = "block";
+}
+
+function launchConfetti() {
+    confetti({
+        particleCount: 500,
+        spread: 180,
+        origin: { x: 0.5, y: 0.5 }
+    });
 }
