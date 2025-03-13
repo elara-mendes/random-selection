@@ -39,6 +39,7 @@ function Draw() {
             console.log(participants)
             participantsList.innerHTML = participants.map(p => `<p>${p}</p>`).join("");
             drawButton.setAttribute("disabled", "true");
+            launchConfetti();
         }
 
         if (participants.length == 0) {
@@ -51,8 +52,6 @@ function Draw() {
             winnerResult.innerHTML = "";
             drawButton.removeAttribute("disabled");
         }, 2500);
-
-        launchConfetti();
 }
 
 function Reset() {
